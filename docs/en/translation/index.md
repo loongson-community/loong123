@@ -5,4 +5,4 @@ aside: false
 prev: false
 next: false
 ---
-# LAT Info
+# Translation Info

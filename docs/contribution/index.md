@@ -12,7 +12,7 @@ next: false
 目前可以选择以下三种方式提供数据：
 
 1. 根据类型查看左侧对应的指引，之后 fork 一份[本仓库](https://github.com/loongson-community/loong123)，修改完毕后向我发起一个PR
-2. [在这里](https://github.com/loongson-community/loong123/issues)发起一份issue，选择`硬件信息/LAT/libLoL`对应的`Form`，根据摸板提示填写对应的表单提交
+2. [在这里](https://github.com/loongson-community/loong123/issues)发起一份issue，选择`硬件信息/translation/libLoL`对应的`Form`，根据摸板提示填写对应的表单提交
 3. (**仅针对硬件信息**) 通过 `hw-probe` 工具执行以下命令：
 
 > **注意：hw-probe 会将收集到的日志也一并上传，请酌情考虑该方式**
@@ -35,7 +35,7 @@ Probe URL: https://linux-hardware.org/?probe=(生成的id)
 
 若fork添加硬件或软件需要正式文档以说明兼容情况，请根据以下内容修改文件：
 
-首先请根据类型到 `/docs/.vitepress/config_files/sidebar_<hardwares/lat/liblol>.js` 下填写链接地址和文档标题，范例如下：
+首先请根据类型到 `/docs/.vitepress/config_files/sidebar_<hardwares/translation/liblol>.js` 下填写链接地址和文档标题，范例如下：
 
 ```js
 { text: '<文档标题>', link: '<文档地址>' }

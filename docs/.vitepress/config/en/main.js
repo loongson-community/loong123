@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 import { navbar } from "./navbar";
 import { sidebar_hardwares } from "./sidebar_hardwares";
-import { sidebar_lat } from "./sidebar_lat";
+import { sidebar_translation } from "./sidebar_translation";
 import { sidebar_liblol } from "./sidebar_liblol";
 import { sidebar_contribution } from "./sidebar_contribution";
 import { sidebar_chips } from "./sidebar_chips";
@@ -23,10 +23,10 @@ export const en = defineConfig({
                     items: sidebar_hardwares,
                 },
             ],
-            "/en/lat/": [
+            "/en/translation/": [
                 {
-                    text: "LAT Info",
-                    items: sidebar_lat,
+                    text: "Translation Info",
+                    items: sidebar_translation,
                 },
             ],
             "/en/liblol/": [

@@ -1,10 +1,12 @@
 name: Creo(Pro/ENGINEER)
 vendor: PTC
 version: 2.0 M060
+lat_or_box64: LAT
 lat_version: 1.5.3-rc1 + wine-9.14
-latx_or_lata: LATX
+box64_version: 
 date: 2012.3
-status: 2
+lat_status: 2
+box64_status: 0
 notes: Creo 2.0 M060能安装，启动慢，显示异常勉强可用
 notes_en: 
 link: 

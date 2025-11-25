@@ -6,6 +6,8 @@
         "brand": "Brand",
         "type": "Type",
         "status": "Status",
+        "lat_status": "LAT Status",
+        "box64_status": "Box64 Status",
         "notes": "Notes",
         "link": "Link",
         "doc_link": "Doc",
@@ -13,8 +15,9 @@
         "vendor": "Vendor",
         "soft_version": "Version",
         "multi_version": "Multi-version",
+        "lat_or_box64": "LAT or Box64",
         "lat_version": "LAT Version",
-        "latx_or_lata": "LATX or LATA",
+        "box64_version": "Box64 Version",
         "uptimedate": "Latest Date",
         "seeindoc": "See in Doc",
         "liblol_version": "LibLoL Version"
@@ -44,7 +47,7 @@
         "unknown": "The application has not been tested yet",
         "compatible": "The application is running normally, and no abnormalities have been found",
         "partial": "The application can run, but some features are known to be unavailable or problematic",
-        "native": "The application already provides native support for LoongArch or offers source code, eliminating the need for LAT translation",
+        "native": "The application already provides native support for LoongArch or offers source code, eliminating the need for translation",
         "new_world": "The application already provides a new-world ABI version or offers source code, eliminating the need for packages from the old-world",
         "unsupported": "The application is completely unsupported"
     },

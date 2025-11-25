@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const json_template = {
     hardwares:[],
-    lat: [],
+    translation: [],
     liblol: []
 }
 
@@ -26,11 +26,11 @@ hardwares.forEach(files => {
     json_template.hardwares.push(jsonResult)
 })
 
-const lat = await glob(__dirname + "/lat/**/*.yml", glob_options)
-lat.forEach(files => {
+const translation = await glob(__dirname + "/translation/**/*.yml", glob_options)
+translation.forEach(files => {
     let yamlFile = fs.readFileSync(files, 'utf-8')
     let jsonResult = yaml.load(yamlFile)
-    json_template.lat.push(jsonResult)
+    json_template.translation.push(jsonResult)
 })
 
 const liblol = await glob(__dirname + "/liblol/**/*.yml", glob_options)

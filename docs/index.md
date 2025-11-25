@@ -23,9 +23,9 @@ features:
   - icon: 
       src: /images/lat.svg
       height: 48px
-    title: LAT 兼容性
-    details: 点击这里可以查看 LoongArch 平台二进制转译层 (LAT) 的兼容性情况
-    link: /list-lat
+    title: 转译兼容性
+    details: 点击这里可以查看二进制转译的兼容性情况
+    link: /list-translation
   - icon: 
       src: /images/liblol.svg
     title: LibLoL 兼容性

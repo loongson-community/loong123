@@ -1,10 +1,11 @@
 name: CATIA
 vendor: Dassault Systemes
 version: 
+lat_or_box64: 
 lat_version: 
-latx_or_lata: 
-date: 
-status: 
+box64_version: 
+lat_status: 
+box64_status: 
 notes: 
 notes_en: 
 link: 

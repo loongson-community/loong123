@@ -1,0 +1,13 @@
+name: SolidWorks 2014 SP
+vendor: Dassault Systemes
+version: 1
+lat_or_box64: LAT
+lat_version: 1.5.3-rc1 + wine-9.14
+box64_version: 
+date: 2013.09
+lat_status: -1
+box64_status: 0
+notes: 运行2014失败，报严重错误（安装报gecko错误）
+notes_en: Failed to run, serious error reported (installation reported gecko error)
+link: /translation/s/solidworks
+link_en: /en/translation/s/solidworks

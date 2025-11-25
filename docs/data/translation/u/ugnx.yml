@@ -1,10 +1,12 @@
 name: UG/NX
 vendor: Siemens
 version: 2306
+lat_or_box64: LAT
 lat_version: 1.5.3-rc1 + wine-9.14
-latx_or_lata: LATX
+box64_version: 
 date: 2023.06
-status: -1
+lat_status: -1
+box64_status: 0
 notes: wine可以安装，NX2306卡启动，然后崩溃
 notes_en: 
 link: 

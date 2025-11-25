@@ -6,7 +6,7 @@
         { "text": "New-world Available", "value": 3 },
         { "text": "Unsupported", "value": -1 }
     ],
-    "filters_status_lat": [
+    "filters_status_translation": [
         { "text": "Unknown", "value": 0 },
         { "text": "Compatible", "value": 1 },
         { "text": "Partial Support", "value": 2 },

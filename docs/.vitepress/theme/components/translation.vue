@@ -13,39 +13,63 @@
         :default-sort="{ prop: 'name', order: 'ascending' }"
         @filter-change="handleFilterChange"
     >
-        <el-table-column prop="name" :label="$t('components.name')" width="200" />
-        <el-table-column prop="vendor" :label="$t('components.vendor')" width="160" />
-        <el-table-column prop="version" :label="$t('components.soft_version')" width="120">
-            <template #default="scope">
-                <span v-if="scope.row.version === 1">{{ $t('components.multi_version') }}</span>
-            </template>
-        </el-table-column>
-        <el-table-column prop="lat_version" :label="$t('components.lat_version')" width="100" />
-        <el-table-column prop="latx_or_lata" :label="$t('components.latx_or_lata')" width="120" />
-        <el-table-column prop="date" :label="$t('components.uptimedate')" width="140">
-            <template #default="scope">
-                <span v-if="scope.row.date === 1">{{ $t('components.seeindoc') }}</span>
-            </template>
-        </el-table-column>
+        <el-table-column prop="name" :label="$t('components.name')" width="120" />
+        <el-table-column prop="vendor" :label="$t('components.vendor')" width="100" />
+        <el-table-column prop="version" :label="$t('components.soft_version')" width="120" />
+        <el-table-column prop="lat_or_box64" :label="$t('components.lat_or_box64')" width="80" />
+        <el-table-column prop="lat_version" :label="$t('components.lat_version')" width="96" />
+        <el-table-column prop="box64_version" :label="$t('components.box64_version')" width="102" />
+        <el-table-column prop="date" :label="$t('components.uptimedate')" width="106" />
         <el-table-column
-            prop="status"
-            :label="$t('components.status')"
-            column-key="status"
-            width="120"
-            :filters="filter_data[current_lang]?.filters_status_lat || 'zh'"
-            :filter-method="filterStatus"
+            prop="lat_status"
+            :label="$t('components.lat_status')"
+            column-key="lat_status"
+            width="140"
+            :filters="filter_data[current_lang]?.filters_status_translation || 'zh'"
+            :filter-method="filterLatStatus"
             filter-placement="bottom-end"
         >
             <template #default="scope">
-                <Unknown v-if="scope.row.status == 0" />
-                <Compatible v-if="scope.row.status == 1" />
-                <Partial v-if="scope.row.status == 2" />
-                <Native v-if="scope.row.status == 3" />
-                <Unsupported v-if="scope.row.status == -1" />
+                <Unknown v-if="scope.row.lat_status == 0" />
+                <Compatible v-if="scope.row.lat_status == 1" />
+                <Partial v-if="scope.row.lat_status == 2" />
+                <Native v-if="scope.row.lat_status == 3" />
+                <Unsupported v-if="scope.row.lat_status == -1" />
             </template>
         </el-table-column>
-        <el-table-column prop="notes" :label="$t('components.notes')" min-width="300" />
-        <el-table-column prop="link" :label="$t('components.link')" width="60" />
+        <el-table-column
+            prop="box64_status"
+            :label="$t('components.box64_status')"
+            column-key="box64_status"
+            width="140"
+            :filters="filter_data[current_lang]?.filters_status_translation || 'zh'"
+            :filter-method="filterBox64Status"
+            filter-placement="bottom-end"
+        >
+            <template #default="scope">
+                <Unknown v-if="scope.row.box64_status == 0" />
+                <Compatible v-if="scope.row.box64_status == 1" />
+                <Partial v-if="scope.row.box64_status == 2" />
+                <Native v-if="scope.row.box64_status == 3" />
+                <Unsupported v-if="scope.row.box64_status == -1" />
+            </template>
+        </el-table-column>
+        <el-table-column prop="notes" :label="$t('components.notes')" min-width="200">
+            <template #default="scope">
+                <span v-if="current_lang == 'en' && scope.row.notes_en">{{ scope.row.notes_en }}</span>
+                <span v-else>{{ scope.row.notes }}</span>
+            </template>
+        </el-table-column>
+        <el-table-column prop="link" :label="$t('components.link')" width="60">
+            <template #default="scope">
+                <span v-if="current_lang == 'en' && scope.row.link_en">
+                    <a :href="scope.row.link_en">{{ $t("components.doc_link") }}</a>
+                </span>
+                <span v-else-if="scope.row.link">
+                    <a :href="scope.row.link">{{ $t("components.doc_link") }}</a>
+                </span>
+            </template>
+        </el-table-column>
     </el-table>
     <el-pagination
         style="justify-content: center"
@@ -68,7 +92,7 @@
     import filter_data from "../../../data/locales.min.json";
     const current_lang = document.documentElement.lang;
 
-    const tableData = ref(databaseJson.lat);
+    const tableData = ref(databaseJson.translation);
 
     const tableRef = ref();
     const currentPage = ref(1); // 当前页码
@@ -82,8 +106,12 @@
         currentPage.value = 1; // 重置为第一页
     };
 
-    const filterStatus = (value, row) => {
-        return row.status === value;
+    const filterLatStatus = (value, row) => {
+        return row.lat_status === value;
+    };
+
+    const filterBox64Status = (value, row) => {
+        return row.box64_status === value;
     };
 
     // 处理搜索

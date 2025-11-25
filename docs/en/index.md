@@ -19,16 +19,16 @@ features:
       src: /images/loongson3.png
     title: Hardwares Compatibility
     details: Click here to view the tested hardware compatibility of the LoongArch platform.
-    link: /list-hardwares
+    link: /en/list-hardwares
   - icon: 
       src: /images/lat.svg
       height: 48px
-    title: LAT Compatibility
-    details: Click here to view LoongArch Translation Layer (LAT) compatibility.
-    link: /list-lat
+    title: Translation Compatibility
+    details: Click here to view Translation compatibility.
+    link: /en/list-translation
   - icon: 
       src: /images/liblol.svg
     title: LibLoL Compatibility
     details: Click here to view the LoongArch platform's Old World and New World Runtime (LibLoL) compatibility.
-    link: /list-liblol
+    link: /en/list-liblol
 ---

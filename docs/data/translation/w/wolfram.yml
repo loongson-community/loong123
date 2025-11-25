@@ -1,0 +1,13 @@
+name: Wolfram
+vendor: Wolfram
+version: 14.2
+lat_or_box64: LAT
+lat_version: 1.6
+box64_version: 
+date: 2025.1
+lat_status: 1
+box64_status: 0
+notes: 需要修改启动脚本添加loongarch64架构判断.
+notes_en: Boot scripts need to be modified to recognize the loongarch64 architecture, and Wolfram Notebook still unable to launch (Qt lib errors). 
+link: /translation/w/wolfram #链接
+link_en: /en/translation/w/wolfram
