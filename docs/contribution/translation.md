@@ -3,7 +3,7 @@ outline: deep
 prev: false
 next: false
 ---
-# 转译软件信息
+# 软件转译信息
 
 ## 开始
 
