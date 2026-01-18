@@ -6,6 +6,7 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import { fileURLToPath } from 'url'
 
+import AutoGenerateJson from "../plugin/auto_generate_data";
 
 import { search_locales_zh } from "./zh/main";
 
@@ -59,6 +60,7 @@ export const shared = defineConfig({
             VueI18nPlugin({
                 include: [path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../i18n/**")]
             }),
+            AutoGenerateJson()
         ],
         build: {
             rollupOptions: {

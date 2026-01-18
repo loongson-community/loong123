@@ -53,7 +53,7 @@
 <script setup>
     import { ref, computed, watch } from "vue";
 
-    import databaseJson from "../../../data/datas.min.json";
+    import liblolJson from "../../../data/liblol.min.json";
     import filter_data from "../../../data/locales.min.json";
     import SearchBar from "./SearchBar.vue";
     let current_lang;
@@ -61,7 +61,7 @@
         current_lang = document.documentElement.lang;
     }
 
-    const tableData = ref(databaseJson.liblol);
+    const tableData = ref(liblolJson);
 
     const tableRef = ref();
     const currentPage = ref(1); // 当前页码

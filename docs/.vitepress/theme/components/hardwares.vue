@@ -90,7 +90,7 @@
     import { sortValue } from "./utils/sortUtils";
     import SearchBar from "./SearchBar.vue";
 
-    import databaseJson from "../../../data/datas.min.json";
+    import hardwaresJson from "../../../data/hardwares.min.json";
     import filter_data from "../../../data/locales.min.json";
     import filter_vendors from "../../../data/vendors.min.json";
     let current_lang;
@@ -98,7 +98,7 @@
         current_lang = document.documentElement.lang;
     }
 
-    const tableData = ref(databaseJson.hardwares); // 初始化 tableData
+    const tableData = ref(hardwaresJson); // 初始化 tableData
 
     const tableRef = ref();
     const currentPage = ref(1); // 当前页码

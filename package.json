@@ -5,10 +5,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "generate:data": "node ./docs/data/generateDatabase.js",
-    "docs:build": "pnpm run generate:data && vitepress build docs",
+    "docs:build": "vitepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
-    "docs:dev": "pnpm run generate:data && vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
     "docs:update-package": "pnpm dlx vp-update",
     "docs:preview": "vitepress preview docs",
     "build:azure": "pnpm run docs:build"

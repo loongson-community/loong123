@@ -88,14 +88,14 @@
     import { sortValue } from "./utils/sortUtils";
     import SearchBar from "./SearchBar.vue";
 
-    import databaseJson from "../../../data/datas.min.json";
+    import translationJson from "../../../data/translation.min.json";
     import filter_data from "../../../data/locales.min.json";
     let current_lang;
     if (typeof window !== "undefined") {
         current_lang = document.documentElement.lang;
     }
 
-    const tableData = ref(databaseJson.translation);
+    const tableData = ref(translationJson);
 
     const tableRef = ref();
     const currentPage = ref(1); // 当前页码
