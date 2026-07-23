@@ -3,8 +3,8 @@ import path from "path";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-import { fileURLToPath } from 'url'
+import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
+import { fileURLToPath } from "url";
 
 import AutoGenerateJson from "../plugin/auto_generate_data";
 
@@ -19,7 +19,7 @@ export const shared = defineConfig({
                 This project is unaffiliated with any for-profit entity. All trademarks referenced herein are property of their respective holders.
             `,
             copyright: `
-                CC BY-SA 4.0 International <a href="https://beian.miit.gov.cn" target="_blank">鄂ICP备2022017735号-10</a>
+                CC BY-SA 4.0 International <a href="https://beian.miit.gov.cn" target="_blank">鄂ICP备2026029618号-5</a>
                 <br />Copyright © 2023-2025 <a href="https://github.com/LiarOnce" target="_blank">LiarOnce</a>
             `
         },
@@ -28,34 +28,34 @@ export const shared = defineConfig({
             options: {
                 locales: {
                     root: search_locales_zh
-                },
-            },
+                }
+            }
         },
         socialLinks: [
             {
                 icon: "github",
-                link: "https://github.com/loongson-community/loong123",
-            },
-        ],
+                link: "https://github.com/loongson-community/loong123"
+            }
+        ]
     },
     markdown: {
-        config: (md) => { },
+        config: md => {}
     },
     vite: {
         ssr: {
-            noExternal: ["element-plus", "vue-i18n"],
+            noExternal: ["element-plus", "vue-i18n"]
         },
         resolve: {
             alias: {
-                '@': path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../')
+                "@": path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../")
             }
         },
         plugins: [
             AutoImport({
-                resolvers: [ElementPlusResolver()],
+                resolvers: [ElementPlusResolver()]
             }),
             Components({
-                resolvers: [ElementPlusResolver()],
+                resolvers: [ElementPlusResolver()]
             }),
             VueI18nPlugin({
                 include: [path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../i18n/**")]
@@ -64,15 +64,15 @@ export const shared = defineConfig({
         ],
         build: {
             rollupOptions: {
-                external: ['document'],
-            },
+                external: ["document"]
+            }
         }
     },
     transformPageData(pageData) {
         if (pageData.frontmatter.date) {
-        const date = new Date(pageData.frontmatter.date)
-            pageData.frontmatter.date = date.toISOString().split('T')[0]
+            const date = new Date(pageData.frontmatter.date);
+            pageData.frontmatter.date = date.toISOString().split("T")[0];
         }
-        return pageData
+        return pageData;
     }
 });
