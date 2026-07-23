@@ -1,67 +1,66 @@
-
 name: 部署文档
 
 on:
-  push:
-    branches:
-      - master
-  workflow_dispatch: 
+    push:
+        branches:
+            - master
+    workflow_dispatch:
 
 permissions:
-  contents: write
+    contents: write
 
 jobs:
-  deploy-pages:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+    deploy-pages:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: true
-          version: latest
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  run_install: true
+                  version: latest
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 24
+                  cache: pnpm
 
-      - name: Build docs
-        env:
-          NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
-          pnpm run docs:build
-          > docs/.vitepress/dist/.nojekyll
+            - name: Build docs
+              env:
+                  NODE_OPTIONS: --max_old_space_size=8192
+              run: |-
+                  pnpm run docs:build
+                  > docs/.vitepress/dist/.nojekyll
 
-      - name: Deploy to pages branch
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: pages
-          folder: docs/.vitepress/dist
-          
-  send-to-myserver:
-    needs: deploy-pages
-    runs-on: ubuntu-latest
-    name: Send message to my server
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: pages
-          
-      - name: Send message
-        env:
-          MESSAGE_SECRET: ${{ secrets.MESSAGE_SECRET }}
-          MESSAGE_URL: ${{ secrets.MESSAGE_URL }}
-        run: |
-          SIG=$(echo -n '{"ref":"refs/heads/pages"}' | openssl dgst -sha256 -hmac "$MESSAGE_SECRET" -binary | xxd -p -c 256 | sed 's/^/sha256=/')
-          
-          curl -X POST \
-            -H "Content-Type: application/json" \
-            -H "X-Hub-Signature-256: $SIG" \
-            -d '{"ref":"refs/heads/pages"}' \
-            "$MESSAGE_URL"
+            - name: Deploy to pages branch
+              uses: JamesIves/github-pages-deploy-action@v4
+              with:
+                  branch: pages
+                  folder: docs/.vitepress/dist
+
+    send-to-myserver:
+        needs: deploy-pages
+        runs-on: ubuntu-latest
+        name: Send message to my server
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                  ref: pages
+
+            - name: Send message
+              env:
+                  MESSAGE_SECRET: ${{ secrets.MESSAGE_SECRET }}
+                  MESSAGE_URL: ${{ secrets.MESSAGE_URL }}
+              run: |
+                  SIG=$(echo -n '{"ref":"refs/heads/pages"}' | openssl dgst -sha256 -hmac "$MESSAGE_SECRET" -binary | xxd -p -c 256 | sed 's/^/sha256=/')
+
+                  curl -X POST \
+                    -H "Content-Type: application/json" \
+                    -H "X-Hub-Signature-256: $SIG" \
+                    -d '{"ref":"refs/heads/pages"}' \
+                    "$MESSAGE_URL"
