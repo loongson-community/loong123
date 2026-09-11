@@ -2,7 +2,7 @@ model: SN550
 arch: WD Blue
 brand: Western Digital
 type: SSD_NVMe 
-status: 1
-notes: 
-notes_en: 
+status: -1
+notes: 在写入数据（如重新分区或将文件系统挂载为可读写）时会触发“输入/输出错误”而失败
+notes_en: writing data into the disk triggers an "I/O Error" and fails
 link:  
