@@ -1,0 +1,9 @@
+model: FirePro M6100
+arch: GCN 1.0 (Curacao)
+brand: AMD
+type: GPU
+status: 1
+notes: MXM 接口
+notes_en: MXM Module
+link: 
+link_en: 

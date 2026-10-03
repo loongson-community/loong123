@@ -1,0 +1,9 @@
+model: Radeon HD 8970M
+arch: GCN 1.0 (Tahiti)
+brand: AMD
+type: GPU
+status: 1
+notes: MXM 接口
+notes_en: MXM Module
+link: 
+link_en: 

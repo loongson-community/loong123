@@ -1,0 +1,9 @@
+model: Radeon Pro WX 4150
+arch: GCN 4.0 (Baffin)
+brand: AMD
+type: GPU
+status: 1
+notes: MXM 接口
+notes_en: MXM Module
+link: 
+link_en: 

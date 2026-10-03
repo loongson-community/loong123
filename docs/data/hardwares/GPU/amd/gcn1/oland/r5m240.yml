@@ -1,0 +1,9 @@
+model: Radeon R5 M240
+arch: GCN 1.0 (Oland)
+brand: AMD
+type: GPU
+status: 1
+notes: 部分笔记本产品可能已经搭载了该 GPU
+notes_en: Some laptops may already be equipped with this GPU.
+link: 
+link_en: 

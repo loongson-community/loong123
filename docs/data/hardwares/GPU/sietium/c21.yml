@@ -1,0 +1,9 @@
+model: C21
+arch: 
+brand: Sietium
+type: GPU
+status: 2
+notes: 仅适配特定内核版本
+notes_en: Compatible only with specific kernel versions
+link: 
+link_en: 

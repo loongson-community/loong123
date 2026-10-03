@@ -1,0 +1,9 @@
+model: Radeon Pro 5600M
+arch: RDNA 1.0 (Navi 10)
+brand: AMD
+type: GPU
+status: 1
+notes: MXM 接口
+notes_en: MXM Module
+link: 
+link_en: 
