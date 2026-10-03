@@ -58,5 +58,6 @@
     { "text": "GeIL", "value": "GeIL" },
     { "text": "MMY", "value": "MMY" },
     { "text": "ASPEED Technology", "value": "ASPEED" },
-    { "text": "XDX Computing Technology", "value": "XDXCT" }
+    { "text": "XDX Computing Technology", "value": "XDXCT" },
+    { "text": "Silicon Motion Technology", "value": "SMI" }
 ]
