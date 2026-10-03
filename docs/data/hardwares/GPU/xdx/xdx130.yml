@@ -1,0 +1,9 @@
+model: XDX 130
+arch: 
+brand: XDXCT
+type: GPU
+status: 2
+notes: 需联系经销商获取驱动，且驱动仅在 Linux 6.8 及以下确认兼容。
+notes_en: You must contact your dealer to obtain the driver, and compatibility has only been confirmed for Linux 6.8 and earlier.
+link: 
+link_en: 
