@@ -100,12 +100,16 @@
     const tableRef = ref();
     const currentPage = ref(1); // 当前页码
     const pageSize = ref(10); // 每页显示条数
-    const selectedData = ref(null);
+    const selectedData = ref({
+        // 获取当前选中的筛选条件（多选，用数组保存全部选中项）
+        lat_status: [],
+        box64_status: []
+    });
     const searchData = ref("");
 
     const clearFilter = () => {
         tableRef.value.clearFilter();
-        selectedData.value = null; // 清空筛选条件
+        selectedData.value = { lat_status: [], box64_status: [] }; // 清空筛选条件
         currentPage.value = 1; // 重置为第一页
     };
 
@@ -130,11 +134,13 @@
         });
     });
 
-    // 处理筛选条件变化
+    // 处理筛选条件变化：按列保留全部选中项，避免多选时只取第一项
     const handleFilterChange = filters => {
-        if (filters.status) {
-            selectedData.value = filters.status.length > 0 ? filters.status[0] : null;
-        }
+        Object.keys(filters).forEach(key => {
+            if (key in selectedData.value) {
+                selectedData.value[key] = Array.isArray(filters[key]) ? filters[key].slice() : [];
+            }
+        });
         currentPage.value = 1;
     };
 
@@ -142,7 +148,8 @@
     const filteredTableData = computed(() => {
         return sortedTableData.value.filter(row => {
             return (!searchData.value || row.name.toLowerCase().includes(searchData.value.toLowerCase())) &&
-                   (!selectedData.value || row.status === selectedData.value);
+                   (!selectedData.value.lat_status.length || selectedData.value.lat_status.includes(row.lat_status)) &&
+                   (!selectedData.value.box64_status.length || selectedData.value.box64_status.includes(row.box64_status));
         });
     });
 

@@ -66,12 +66,12 @@
     const tableRef = ref();
     const currentPage = ref(1); // 当前页码
     const pageSize = ref(10); // 每页显示条数
-    const selectedData = ref(null);
+    const selectedData = ref([]); // 当前选中的状态筛选条件（多选，数组保存全部选中项）
     const searchData = ref("");
 
     const clearFilter = () => {
         tableRef.value.clearFilter();
-        selectedData.value = null; // 清空筛选条件
+        selectedData.value = []; // 清空筛选条件
         currentPage.value = 1; // 重置为第一页
     };
 
@@ -85,10 +85,10 @@
         currentPage.value = 1;
     };
 
-    // 处理筛选条件变化
+    // 处理筛选条件变化：保留全部选中项，避免多选时只取第一项
     const handleFilterChange = filters => {
         if (filters.status) {
-            selectedData.value = filters.status.length > 0 ? filters.status[0] : null;
+            selectedData.value = filters.status.slice();
         }
         currentPage.value = 1;
     };
@@ -97,7 +97,7 @@
     const filteredTableData = computed(() => {
         return tableData.value.filter(row => {
             return (!searchData.value || row.name.toLowerCase().includes(searchData.value.toLowerCase())) &&
-                   (!selectedData.value || row.status === selectedData.value);
+                   (!selectedData.value.length || selectedData.value.includes(row.status));
         });
     });
 

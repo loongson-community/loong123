@@ -104,16 +104,16 @@
     const currentPage = ref(1); // 当前页码
     const pageSize = ref(10); // 每页显示条数
     const selectedData = ref({
-        // 获取当前选中的筛选条件
-        brand: null,
-        type: null,
-        status: null
+        // 获取当前选中的筛选条件（多选，用数组保存全部选中项）
+        brand: [],
+        type: [],
+        status: []
     });
     const searchData = ref("");
 
     const clearFilter = () => {
         tableRef.value.clearFilter();
-        selectedData.value = { brand: null, type: null, status: null }; // 清空筛选条件
+        selectedData.value = { brand: [], type: [], status: [] }; // 清空筛选条件
         searchData.value = "";
         currentPage.value = 1; // 重置为第一页
     };
@@ -143,17 +143,13 @@
         currentPage.value = 1;
     };
 
-    // 处理筛选条件变化
+    // 处理筛选条件变化：保留全部选中项，避免多选时只取第一项
     const handleFilterChange = filters => {
-        if (filters.brand) {
-            selectedData.value.brand = filters.brand.length > 0 ? filters.brand[0] : null;
-        }
-        if (filters.type) {
-            selectedData.value.type = filters.type.length > 0 ? filters.type[0] : null;
-        }
-        if (filters.status) {
-            selectedData.value.status = filters.status.length > 0 ? filters.status[0] : null;
-        }
+        Object.keys(filters).forEach(key => {
+            if (key in selectedData.value) {
+                selectedData.value[key] = Array.isArray(filters[key]) ? filters[key].slice() : [];
+            }
+        });
         currentPage.value = 1;
     };
 
@@ -172,9 +168,9 @@
                     arch.includes(searchQuery) ||
                     brand.includes(searchQuery)
                 ) &&
-                (!selectedData.value.brand || row.brand === selectedData.value.brand) &&
-                (!selectedData.value.type || row.type === selectedData.value.type) &&
-                (!selectedData.value.status || row.status === selectedData.value.status)
+                (!selectedData.value.brand.length || selectedData.value.brand.includes(row.brand)) &&
+                (!selectedData.value.type.length || selectedData.value.type.includes(row.type)) &&
+                (!selectedData.value.status.length || selectedData.value.status.includes(row.status))
             );
         });
     });
