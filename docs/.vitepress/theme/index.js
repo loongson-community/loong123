@@ -1,10 +1,13 @@
 import DefaultTheme from "vitepress/theme";
 import './custom.css'
-import ElementPlus from 'element-plus'
+import ElementPlus, { ElConfigProvider } from 'element-plus'
 import 'element-plus/theme-chalk/base.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import 'element-plus/theme-chalk/el-message.css';
-import { nextTick } from "vue";
+import { computed, defineComponent, h, nextTick } from "vue";
+import { useData } from 'vitepress';
+
+import { resolveElementPlusLocale } from "./element-locale";
 
 import compatibleBadge from './components/badges/compatible.vue'
 import partialBadge from './components/badges/partial.vue'
@@ -15,8 +18,26 @@ import unsupportedBadge from './components/badges/unsupported.vue'
 
 import i18n from "./i18n";
 
+// 让 Element Plus 的内置文案（表格筛选面板的“筛选/重置”按钮、分页文案等）
+// 跟随站点当前语言；语言变化时 el-config-provider 会重新注入 locale
+const Layout = defineComponent({
+    name: "Layout",
+    setup(_, { slots }) {
+        const { lang } = useData();
+        const elementLocale = computed(() => resolveElementPlusLocale(lang.value));
+
+        return () =>
+            h(
+                ElConfigProvider,
+                { locale: elementLocale.value },
+                { default: () => h(DefaultTheme.Layout, null, slots) }
+            );
+    },
+});
+
 export default {
     ...DefaultTheme,
+    Layout,
     enhanceApp(ctx) {
         DefaultTheme.enhanceApp(ctx);
         ctx.app.use(i18n);
