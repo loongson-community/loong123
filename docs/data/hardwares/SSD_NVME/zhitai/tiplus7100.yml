@@ -1,5 +1,5 @@
 model: TiPlus7100
-brand: ZHITAI/YMTC
+brand: YMTC
 type: SSD_NVMe 
 status: 1 
 notes: 

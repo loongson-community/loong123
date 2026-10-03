@@ -63,31 +63,31 @@ This value is only filled in by the manufacturer to which the hardware belongs, 
 
 The English names of some of the manufacturers are provided here for reference in no particular order:
 
-| Brand English Name<br />(`brand` value) | Notes                                                                                                         |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| ZHITAI/YMTC                               | For the products of YMTC, all the products here are filled with `ZHITAI/YMTC`                               |
-| CXMT                                      |                                                                                                               |
-| JHICC                                     |                                                                                                               |
-| ADATA                                     |                                                                                                               |
-| Colorful                                  |                                                                                                               |
-| longsys/FORESEE                           | For the products of longsys, fill in `longsys/FORESEE` here (including memory sticks and SSDs).            |
-| UniIC                                     |                                                                                                               |
-| Samsung                                   |                                                                                                               |
-| Solidigm/SK Hynix                         | For the products of SK Hynix, fill in `Solidigm/SK Hynix` (including memory sticks and SSDs).              |
-| Quanxing                                  |                                                                                                               |
-| Corsair                                   |                                                                                                               |
-| Crucial/Micron                            | For the products of Micron, fill in `Crucial/Micron` here.                                                  |
-| POWEV                                     | POWEV's brands include: GLOWAY, Asgard, CUSO, and SINKER, fill in `POWEV` here and fill brand in `arch`. |
-| KingBank                                  |                                                                                                               |
-| Motorcomm                                 |                                                                                                               |
-| MUCSE                                     |                                                                                                               |
-| Kioxia                                    |                                                                                                               |
-| Toshiba                                   |                                                                                                               |
-| Western Digital                           |                                                                                                               |
-| Sandisk                                   |                                                                                                               |
-| AMD                                       |                                                                                                               |
-| Intel                                     |                                                                                                               |
-| NVIDIA                                    | Since Mellanox was acquired by NVIDIA, all Mellanox products are owned by NVIDIA.                             |
+| Brand English Name                                 | `brand` value | Notes                                                                                                        |
+| -------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------ |
+| ZHITAI/YMTC                                        | YMTC            | For the products of YMTC, all the products here are filled with`YMTC`                                      |
+| CXMT                                               | CXMT            |                                                                                                              |
+| JHICC                                              | JHICC           |                                                                                                              |
+| ADATA                                              | ADATA           |                                                                                                              |
+| Colorful                                           | Colorful        |                                                                                                              |
+| longsys/FORESEE                                    | longsys         | For the products of longsys, fill in`longsys` here (including memory sticks and SSDs).                    |
+| UniIC                                              | UniIC           |                                                                                                              |
+| Samsung                                            | Samsung         |                                                                                                              |
+| Solidigm/SK Hynix                                  | SKHynix         | For the products of Solidigm and SK Hynix, fill in`SKHynix` (including memory sticks and SSDs).          |
+| Quanxing                                           | Quanxing        |                                                                                                              |
+| Corsair                                            | Corsair         |                                                                                                              |
+| Crucial/Micron                                     | Micron          | For the products of Crucial and Micron, fill in`Micron` here.                                             |
+| POWEV                                              | POWEV           | POWEV's brands include: GLOWAY, Asgard, CUSO, and SINKER, fill in`POWEV` here and fill brand in `arch`. |
+| KingBank                                           | KingBank        |                                                                                                              |
+| Motorcomm                                          | Motorcomm       |                                                                                                              |
+| MUCSE                                              | MUCSE           |                                                                                                              |
+| Kioxia                                             | Kioxia          |                                                                                                              |
+| Toshiba                                            | Toshiba         |                                                                                                              |
+| Western Digital<br />(Western Digital Corporation) | WDC             | For the products of Western Digital, fill in`WDC` here.                                                    |
+| Sandisk                                            | Sandisk         |                                                                                                              |
+| AMD                                                | AMD             |                                                                                                              |
+| Intel                                              | Intel           |                                                                                                              |
+| NVIDIA                                             | NVIDIA          | Since Mellanox was acquired by NVIDIA, all Mellanox products are owned by NVIDIA.                            |
 
 ## type
 

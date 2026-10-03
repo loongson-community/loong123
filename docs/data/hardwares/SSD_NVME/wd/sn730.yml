@@ -1,5 +1,5 @@
 model: SN730 (OEM)
-brand: Western Digital
+brand: WDC
 type: SSD_NVMe 
 status: -1 
 notes: 报 I/O 错误，用硬盘盒转接 USB 也不行

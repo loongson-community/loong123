@@ -1,6 +1,6 @@
 model: SN850
 arch: WD Black
-brand: Western Digital
+brand: WDC
 type: SSD_NVMe 
 status: 1
 notes: 

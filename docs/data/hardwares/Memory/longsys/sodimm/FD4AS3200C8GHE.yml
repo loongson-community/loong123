@@ -1,6 +1,6 @@
 model: FD4AS3200C8GHE
 arch: 
-brand: longsys/FORESEE
+brand: longsys
 type: Memory_SODIMM
 status: 1
 notes: 
