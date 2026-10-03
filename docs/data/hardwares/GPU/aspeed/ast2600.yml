@@ -1,0 +1,9 @@
+model: AST2500
+arch: 
+brand: ASPEED
+type: GPU
+status: 1
+notes: 内置于BMC内的集成显卡
+notes_en: iGPU integrated into the BMC
+link: 
+link_en: 
