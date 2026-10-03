@@ -2,8 +2,8 @@ model: GeForce RTX 3090
 arch: Ampere
 brand: NVIDIA
 type: GPU 
-status: 3
-notes: 更新 MultiArchUefiPkg 固件后可配合 nouveau 内核模块使用
-notes_en: Updated MultiArchUefiPkg firmware for use with nouveau kernel module.
+status: -1
+notes: 在开源版本驱动达到可用之前均标记为不兼容。
+notes_en: Before the open-source version of the driver becomes available, these hardware are marked as incompatible.
 link: 
 link_en: 
