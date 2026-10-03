@@ -2,8 +2,8 @@ model: Radeon Pro 5500M
 arch: RDNA 1.0 (Navi 14)
 brand: AMD
 type: GPU
-status: 1
+status: 3
 notes: MXM 接口
 notes_en: MXM Module
-link: 
-link_en: 
+link: /hardwares/amdgpu.html#rdna 
+link_en: /en/hardwares/amdgpu.html#rdna
