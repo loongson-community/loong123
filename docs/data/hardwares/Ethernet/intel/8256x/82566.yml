@@ -1,0 +1,13 @@
+model: |
+  82566DM
+  82566MM
+  82566DC
+  82566MC
+arch: 82566 Series
+brand: Intel
+type: Ethernet
+status: 1
+notes: 
+notes_en: 
+link: 
+link_en: 

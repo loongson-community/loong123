@@ -1,7 +1,0 @@
-model: 8257x Series
-brand: Intel
-type: Ethernet 
-status: 1 
-notes: 包含 82571, 82572, 82573, 82574, 82575, 82576, 82577, 82578, 82579 系列控制器。
-notes_en: Including 82571, 82572, 82573, 82574, 82575, 82576, 82577, 82578, 82579 Series controller.
-link:  

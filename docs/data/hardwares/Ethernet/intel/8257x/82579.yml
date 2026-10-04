@@ -1,0 +1,11 @@
+model: |
+  82579LM
+  82579V
+arch: 82579 Series
+brand: Intel
+type: Ethernet
+status: 1
+notes: 
+notes_en: 
+link: 
+link_en: 

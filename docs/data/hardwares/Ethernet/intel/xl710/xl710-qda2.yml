@@ -1,0 +1,9 @@
+model: XL710-QDA2
+arch: XL710-BM2
+brand: Intel
+type: Ethernet
+status: 1
+notes: 
+notes_en: 
+link: 
+link_en: 

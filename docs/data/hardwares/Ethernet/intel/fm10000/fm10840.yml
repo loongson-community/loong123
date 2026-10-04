@@ -1,0 +1,7 @@
+model: FM10840
+arch: FM10000 Series
+brand: Intel
+type: Ethernet 
+status: 0 
+notes: 
+link:  

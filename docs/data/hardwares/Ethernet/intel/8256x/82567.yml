@@ -1,0 +1,12 @@
+model: |
+  82567LF
+  82567LM
+  82567V
+arch: 82567 Series
+brand: Intel
+type: Ethernet
+status: 1
+notes: 
+notes_en: 
+link: 
+link_en: 

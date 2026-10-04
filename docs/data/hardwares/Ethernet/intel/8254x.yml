@@ -1,7 +1,0 @@
-model: 8254x Series
-brand: Intel
-type: Ethernet 
-status: 1 
-notes: 包含 82540, 82541, 82543, 82544, 82545, 82546, 82547 系列控制器。
-notes_en: Including 82540, 82541, 82543, 82544, 82545, 82546, 82547 Series controller.
-link:  
