@@ -1,7 +1,0 @@
-model: Mellanox ConnectX-6 Lx Series
-brand: NVIDIA
-type: Ethernet
-status: 2
-notes: 仅在 7A2000 桥片上可用
-notes_en: Available on 7A2000 chipset only
-link: 
