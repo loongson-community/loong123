@@ -1,4 +1,5 @@
-model: WX5025 Series
+model: RP2000P2SFP
+arch: WX1820AL
 brand: Wangxun
 type: Ethernet
 status: 1

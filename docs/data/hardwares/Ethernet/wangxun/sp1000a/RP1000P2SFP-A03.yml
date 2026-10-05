@@ -1,8 +1,9 @@
-model: WX1820 Series
+model: RP1000P2SFP-A03
+arch: SP1000A
 brand: Wangxun
 type: Ethernet
 status: 1
-notes: 
-notes_en: 
+notes:
+notes_en:
 link: /hardwares/netswift
 link_en: /en/hardwares/netswift

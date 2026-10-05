@@ -1,0 +1,9 @@
+model: FF5025-DDATACXX
+arch: WX5025
+brand: Wangxun
+type: Ethernet
+status: 1
+notes: 
+notes_en: 
+link: /hardwares/netswift
+link_en: /en/hardwares/netswift

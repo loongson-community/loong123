@@ -1,4 +1,7 @@
-model: WX1860 Series
+model: |
+  SF200T
+  SF200HT
+arch: WX1860AL4
 brand: Wangxun
 type: Ethernet
 status: 1
