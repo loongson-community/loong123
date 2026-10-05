@@ -1,0 +1,8 @@
+model: N500L-AM4C-QD
+brand: MUCSE
+type: Ethernet
+status: 1
+notes: 目前仅支持 Linux 4.19-6.1 版本内核安装驱动
+notes_en: Currently, only Linux 4.19-6.1 kernel are supported for driver installation.
+link: 
+link_en: 
