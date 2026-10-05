@@ -1,0 +1,9 @@
+model: VT6105
+arch: 
+brand: VIA
+type: Ethernet
+status: 1
+notes: 通过 PCIe 交换机转到 PCI 使用（此时主板应含有 PEX811x 系列或 ASM1083 转换芯片）
+notes_en: Using through a PCIe switch to PCI (the motherboard should include a PEX811x series or ASM1083 chip)
+link: 
+link_en: 
