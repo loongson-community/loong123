@@ -1,0 +1,11 @@
+model: |
+  AR8152
+  AR8158
+arch: Atheros
+brand: Qualcomm
+type: Ethernet
+status: 1
+notes: 
+notes_en: 
+link: 
+link_en: 
