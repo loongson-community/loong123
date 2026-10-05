@@ -1,9 +1,0 @@
-model: BCM57712/BCM57800/BCM57810/BCM57811/BCM57840
-arch: NetXtreme II
-brand: Broadcom
-type: Ethernet 
-status: 1 
-notes: 
-notes_en: 
-link: 
-link_en: 

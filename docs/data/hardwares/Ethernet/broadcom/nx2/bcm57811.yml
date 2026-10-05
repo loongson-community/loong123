@@ -1,0 +1,13 @@
+model: |
+    BCM57811
+    BCM57811S
+    BCM57811-MF
+    BCM57811-VF
+arch: QLogic NetXtreme II
+brand: Broadcom
+type: Ethernet
+status: 1
+notes:
+notes_en:
+link:
+link_en:

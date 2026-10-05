@@ -1,0 +1,11 @@
+model: |
+    BCM57712
+    BCM57712-MF
+arch: QLogic NetXtreme II
+brand: Broadcom
+type: Ethernet
+status: 1
+notes:
+notes_en:
+link:
+link_en:

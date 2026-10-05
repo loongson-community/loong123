@@ -1,0 +1,8 @@
+model: BCM5709
+arch: QLogic NetXtreme II
+brand: Broadcom
+type: Ethernet
+status: 1
+notes:
+link:
+link_en:
