@@ -4,6 +4,7 @@
     { "text": "AMD", "value": "AMD" },
     { "text": "ASUS", "value": "ASUS" },
     { "text": "Akko", "value": "Akko" },
+    { "text": "Broadcom", "value": "Broadcom" },
     { "text": "Brother", "value": "Brother" },
     { "text": "Colorful", "value": "Colorful" },
     { "text": "Crucial/Micron", "value": "Micron" },
@@ -59,5 +60,8 @@
     { "text": "MMY", "value": "MMY" },
     { "text": "ASPEED Technology", "value": "ASPEED" },
     { "text": "XDX Computing Technology", "value": "XDXCT" },
-    { "text": "Silicon Motion Technology", "value": "SMI" }
+    { "text": "Silicon Motion Technology", "value": "SMI" },
+    { "text": "Qualcomm", "value": "Qualcomm" },
+    { "text": "Marvell Technology", "value": "Marvell" },
+    { "text": "VIA Technology", "value": "VIA" }
 ]
