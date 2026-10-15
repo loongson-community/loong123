@@ -1,8 +1,9 @@
 model: I210-T1
+arch: I210 Series
 brand: Intel
 type: Ethernet
 status: 1
-notes: 来源 name：Intel I210-T1｜来源厂商：Intel Corporation｜上游芯片：Intel (I210 Series)，名称含芯片标识
+notes: 
 notes_en: 
 link: 
 link_en: 

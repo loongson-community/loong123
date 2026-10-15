@@ -7,7 +7,7 @@ arch: 82577/82578 Series
 brand: Intel
 type: Ethernet
 status: 1
-notes: 来源 name：Intel 82577LM Gigabit Network Connection｜来源厂商：Intel Corporation｜上游芯片：Intel (8257x Series)，名称含芯片标识
+notes: 
 notes_en: 
 link: 
 link_en: 
